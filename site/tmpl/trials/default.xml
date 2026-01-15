@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_TRIALS_TRIALS_VIEW_DEFAULT_TITLE">
+        <message>COM_TRIALS_TRIALS_VIEW_DEFAULT_DESC</message>
+    </layout>
+
+    <fields name="params"
+        addruleprefix="NPEU\Component\Bespoke\Administrator\Rule"
+        addfieldprefix="NPEU\Component\Bespoke\Administrator\Field"
+        >
+        <fieldset
+            name="basic"
+            label="COM_TRIALS_FIELDSET_OPTIONS_LABEL"
+            description="COM_TRIALS_FIELDSET_OPTIONS_DESC"
+        >
+            <field
+                name="data_src"
+                type="url"
+                label="COM_TRIALS_DATA_SRC_LABEL"
+                description="COM_TRIALS_DATA_SRC_DESC"
+                size="40"
+                default=""
+            />
+            <field
+                name="aqs_tog"
+                type="radio"
+                default="0"
+                label="COM_TRIALS_ADV_QUERY_TOG_LABEL"
+                description="COM_TRIALS_ADV_QUERY_TOG_DESC"
+                class="btn-group btn-group-yesno"
+            >
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field
+                name="aqs"
+                type="textarea"
+                label="COM_TRIALS_ADV_QUERY_LABEL"
+                description="COM_TRIALS_ADV_QUERY_DESC"
+                default=""
+                rows="10"
+                filter="raw"
+                class="monospace"
+                showon="aqs_tog:1"
+            />
+            <field
+                name="data_tpl"
+                type="textarea"
+                label="COM_TRIALS_TPL_LABEL"
+                description="COM_TRIALS_TPL_DESC"
+                default=""
+                rows="10"
+                filter="raw"
+                class="monospace"
+            />
+            <field
+                name="data_src_err"
+                type="textarea"
+                label="COM_TRIALS_SOURCE_ERROR_LABEL"
+                description="COM_TRIALS_SOURCE_ERROR_DESC"
+                default="Data could not be fetched from the data source."
+                rows="3"
+            />
+            <field
+                name="data_decode_err"
+                type="textarea"
+                label="COM_TRIALS_DECODE_ERROR_LABEL"
+                description="COM_TRIALS_DECODE_ERROR_DESC"
+                default="Data could not be decoded as JSON."
+                rows="3"
+            />
+        </fieldset>
+    </fields>
+</metadata>
