@@ -38,6 +38,7 @@
         <folder>language</folder>
         <folder>src</folder>
         <folder>tmpl</folder>
+        <folder>vendor</folder>
     </files>
 
     <administration>
