@@ -444,7 +444,7 @@ if ($output === false) {
 }
 ob_start();
 ?>
-<?php if ($brand) : ?>
+<?php /*if ($brand) : ?>
 <div>
 
     <div class="l-box l-box--center  l-box--space--block">
@@ -453,7 +453,7 @@ ob_start();
         </a>
     </div>
 </div>
-<?php endif; ?>
+<?php endif; */?>
 <?php
 $doc->component__sidebar_top = ob_get_contents();
 ob_end_clean();
