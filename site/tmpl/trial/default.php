@@ -98,7 +98,7 @@ ob_end_clean();
     </p>
 
     <?php if ($trial->support_role != "") : ?>
-    <p>NPEU role: <?php echo $trial->support_role|regex_replace('#(https?://\\S+)#', '<a href="$1" rel="external">$1</a>')|raw; ?></p>
+    <p>NPEU role: <?php echo preg_replace('#(https?://\\S+)#', '<a href="$1" rel="external">$1</a>', $trial->support_role); ?></p>
     <?php endif; ?>
 
     <?php if (!empty($trial->summary)) : ?>
